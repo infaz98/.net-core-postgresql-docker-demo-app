@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32407.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{885DB3D7-601A-4608-91E2-D7A2EBB8BE85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{D49DA9E6-BAF7-4FD3-949D-C225BE0F0FA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceTwo", "ServiceTwo", "{F68DCDB6-1B8B-48B1-B655-C94BE00BF12C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SerivceOne", "SerivceOne", "{FEC1937D-6A68-42B9-B0EE-B1911B0421CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceOne.API", "src\services\ServiceOne\ServiceOne.API\ServiceOne.API.csproj", "{4C9FBA83-E95E-4CB8-A2A2-89E9BCFBD6CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C9FBA83-E95E-4CB8-A2A2-89E9BCFBD6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9FBA83-E95E-4CB8-A2A2-89E9BCFBD6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9FBA83-E95E-4CB8-A2A2-89E9BCFBD6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9FBA83-E95E-4CB8-A2A2-89E9BCFBD6CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D49DA9E6-BAF7-4FD3-949D-C225BE0F0FA6} = {885DB3D7-601A-4608-91E2-D7A2EBB8BE85}
+		{F68DCDB6-1B8B-48B1-B655-C94BE00BF12C} = {D49DA9E6-BAF7-4FD3-949D-C225BE0F0FA6}
+		{FEC1937D-6A68-42B9-B0EE-B1911B0421CB} = {D49DA9E6-BAF7-4FD3-949D-C225BE0F0FA6}
+		{4C9FBA83-E95E-4CB8-A2A2-89E9BCFBD6CC} = {FEC1937D-6A68-42B9-B0EE-B1911B0421CB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0964F93-8388-45FA-8B89-DF2E5662BFE6}
+	EndGlobalSection
+EndGlobal

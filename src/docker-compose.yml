@@ -1,0 +1,40 @@
+version: '3.4'
+
+networks:
+  dev:
+    driver: bridge 
+
+services:
+  customer-service:
+    image: ${REGISTRY:-service-one}/customer-service.api:${PLATFORM:-linux}-${TAG:-latest}
+    depends_on:
+      - "customer_db"
+    container_name: customer-service
+    ports:
+      - "5009:80"
+    build:
+      context: .
+      dockerfile: services/ServiceOne/ServiceOne.API/Dockerfile
+    environment:
+      - ConnectionString=host=worklog_management_db;port=5435;database=demo-app;username=postgres;password=postgres;Pooling=true;
+    networks:
+      - dev
+
+  customer_db:
+    image: postgres:latest
+    container_name: customer_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=employee
+    ports:
+      - "5432:5432"
+    restart: always
+    volumes:
+      - customer_data:/var/lib/postgresql/data/ 
+    networks:
+      - dev
+
+volumes:
+  customer_data:
+
